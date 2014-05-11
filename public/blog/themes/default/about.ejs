@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <!--<link rel="stylesheet" type="text/css" href="/themes/default/libs/bootstrap3.1.1/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="/themes/default/css/style.css"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/themes/default/css/fontello-ie7.css">
+    <![endif]-->
+</head>
+<body>
+<div id="main" role="main">
+    <%- include header.ejs %>
+    <div class="content">
+        <div class="article">
+            <div class="post">
+                <h1>node-blog</h1>
+
+                <hr>
+
+                <p>node-blog是node编写一个超级简单的blog应用。 <a href="http://maczam.duapp.com/">在线demo</a></p>
+
+                <ul>
+                    <li>数据库使用当前最流行的mongodb</li>
+                    <li>渲染引擎使用markdown</li>
+                    <li>支持本地、vps和bae部署</li>
+                    <li>支持更换主题</li>
+                </ul>
+
+                <h2>本地安装</h2>
+
+                <ol>
+                    <li>node install</li>
+                    <li>修改settings.js配置文件local信息</li>
+                    <li>本地启动<code> node server.js local</code></li>
+                </ol>
+
+                <h2>bae安装</h2>
+
+                <ol>
+                    <li>修改settings.js配置文件baidu信息</li>
+                    <li>部署</li>
+                </ol>
+
+                <h2>资源</h2>
+
+                <ul>
+                    <li><a href="http://www.hexin.info">默认模板</a></li>
+                    <li><a href="http://maczam.duapp.com/">在线demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%- include footer.ejs %>
+</div>
+</body>
+</html>

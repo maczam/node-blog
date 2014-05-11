@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>node-blog</h1>
+
+            <h3>安装和使用手册</h3>
+
+            <p>
+                <small>Created by @maczam</small>
+            </p>
+        </section>
+
+        <section>
+            <h2>node-blog简介</h2>
+
+            <p>
+                node-blog是开源node编写一个简单的blog应用。
+            <ul>
+                <li>数据库使用当前最流行的mongodb</li>
+                <li>渲染引擎使用markdown</li>
+                <li>支持本地、vps和bae部署</li>
+                <li>支持更换主题</li>
+            </ul>
+            </p>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+            <section>
+                <h2>安装</h2>
+
+                <p>
+                <ul>
+                    <li>支持vps</li>
+                    <li>bae</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <h2>vps安装</h2>
+
+                <p>
+                <ul>
+                    <li>node install</li>
+                    <li>修改settings.js配置文件local信息</li>
+                    <li>本地启动 node server.js local</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <h2>bae安装</h2>
+
+                <p>
+                <ul>
+                    <li>申请node运行单元</li>
+                    <li>申请mongodb</li>
+                    <li>修改settings.js配置文件baidu信息</li>
+                    <li>上传到bae并发布</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h2>资源</h2>
+
+            <p>
+            <ul>
+                <li><a href="https://github.com/maczam/node-blog">开源地址(https://github.com/maczam/node-blog)</a></li>
+                <li><a href="http://www.hexin.info/">主题地址(http://www.hexin.info/)</a></li>
+                <li><a href="http://maczam.duapp.com/">在线demo(http://maczam.duapp.com/)</a></li>
+            </ul>
+            </p>
+        </section>
+
+    </div>
+
+</div>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'reveal.js/plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+</script>
+
+</body>
+</html>

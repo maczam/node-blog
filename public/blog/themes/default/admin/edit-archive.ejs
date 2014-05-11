@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="save-archive" method="post">
+    <table width="90%">
+        <tr>
+            <td><input type="text" name="title" class="archive-title"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="tags" class="archive-title" placeholder="tags"></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="categories" class="archive-title" placeholder="categories"></td>
+        </tr>
+        <tr>
+            <td><textarea rows="6" name="content" cols="60" class="archive-content"></textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="预览">
+                <input type="submit" value="提交">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<!--<div id="preview"></div>-->
+<!--<script src="../libs/markdown.js"></script>-->
+<!--<script>-->
+<!--function Editor(input, preview) {-->
+<!--this.update = function () {-->
+<!--preview.innerHTML = markdown.toHTML(input.value);-->
+<!--};-->
+<!--input.editor = this;-->
+<!--this.update();-->
+<!--}-->
+<!--var $ = function (id) {-->
+<!--return document.getElementById(id);-->
+<!--};-->
+<!--new Editor($("text-input"), $("preview"));-->
+<!--</script>-->
+</body>
+</html>

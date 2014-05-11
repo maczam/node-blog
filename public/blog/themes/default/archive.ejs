@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <!--<link rel="stylesheet" type="text/css" href="/themes/default/libs/bootstrap3.1.1/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="/themes/default/css/style.css"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/themes/default/css/fontello-ie7.css">
+    <![endif]-->
+</head>
+<body>
+<div id="main" role="main">
+    <%- include header.ejs %>
+    <div class="content">
+        <div class="article">
+            <div class="title">
+                <h2><%= archive.title %></h2>
+            </div>
+            <div class="meta">
+                <span class="time">
+                    <time><%= archive.date %></time>
+                </span>
+                <span class="categories">
+                        <span class="icon-bookmark" title="Categories"></span>
+                    <% if (archive.categories && archive.categories.length > 0) {
+                            archive.categories.forEach(function(categorie){
+                    %>
+                    <a href="/categories#<%= categorie %>" title="<%= categorie %>"><%= categorie %></a>
+                    <%
+                    })
+                    } %>
+                </span>
+                    <span class="tags">
+                        <span class="icon-tags" title="Tags"></span>
+                        <% if (archive.tags && archive.tags.length > 0) {
+                                archive.tags.forEach(function(tag){
+                        %>
+                        <a href="/tags#<%= tag %>" title="<%= tag %>"><%= tag %></a>
+                        <%
+                        })
+                        } %>
+                    </span>
+            </div>
+            <div class="post">
+                <%- archive.content %>
+            </div>
+        </div>
+    </div>
+    <%- include footer.ejs %>
+</div>
+</body>
+</html>
