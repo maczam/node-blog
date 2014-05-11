@@ -1,23 +1,22 @@
 node-blog
 =======
----
+
 node-blog是node编写一个超级简单的blog应用。 [在线demo](http://maczam.duapp.com/)
 
-* 数据库使用当前最流行的mongodb
-* 渲染引擎使用markdown
+* markdown编写blog
 * 支持本地、vps和bae部署
 * 支持更换主题
+* 生成静态文件，快速访问
 
-本地安装
+安装
 ---
-1. node install
-2. 修改settings.js配置文件local信息
-2. 本地启动` node server.js local`
-
-bae安装
----
-1. 修改settings.js配置文件baidu信息
-2. 部署
+···
+git clone git@github.com:maczam/node-blog.git --depth=0
+cd node-blog
+npm install
+node server.js
+在浏览器上访问 http://localhost/blog/
+···
 
 
 资源
