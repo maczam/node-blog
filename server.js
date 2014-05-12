@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || settings.web.port);
 app.use(express.urlencoded());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public/')));
-app.set('views', path.join(__dirname, 'public/themes'));
+app.set('views', path.join(__dirname, 'public/blog/themes'));
 app.set('view engine', 'ejs');
 app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
 app.use(express.logger('dev'));
