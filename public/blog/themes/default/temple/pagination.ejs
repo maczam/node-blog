@@ -1,0 +1,9 @@
+<div class="pagination">
+    <div class="paginator-list">
+        <% for(var i = 1 , len = pager.total_pages; i <= len;i++ ){ %>
+        <a href="<%= '/blog/html/page' + i %>"><%= i %></a>
+        <%
+        }
+        %>
+    </div>
+</div>

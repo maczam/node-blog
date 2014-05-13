@@ -1,0 +1,30 @@
+<div class="article">
+    <div class="title">
+        <h2><a href="<%= '/blog/html/'+archive.url_path %>"><%= archive.title %></a></h2>
+    </div>
+    <div class="meta">
+        <span class="time">
+            <% if(archive.date){
+
+                %>
+            <time><%= archive.date%></time>
+            <%
+            }
+             %>
+
+        </span>
+        <span class="tags">
+            <span class="icon-tags" title="Tags"></span>
+            <% if (archive.tags && archive.tags.length > 0) {
+                    archive.tags.forEach(function(tag){
+            %>
+            <a href="/blog/html/tags/<%= tag %>" title="<%= tag %>"><%= tag %></a>
+            <%
+            })
+            } %>
+        </span>
+    </div>
+    <div class="post">
+        <%- archive.content %>
+    </div>
+</div>
