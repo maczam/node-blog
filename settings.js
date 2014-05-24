@@ -1,7 +1,7 @@
 module.exports = {
     web: {
         cookieSecret: 'myblog',
-        port: 80
+        port: 18080
     },
     site: {
         title: 'maczam的nodejs-blog',
