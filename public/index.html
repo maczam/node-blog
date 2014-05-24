@@ -5,22 +5,90 @@
     <meta charset="UTF-8">
     <title>maczam</title>
     <style>
-        body {
-            height: 100%;
-            text-align: center;
-        }
-
-        * {
-            margin: 0;
-            padding: 0
-        }
-        .content{margin-top: 300px;}
-        .content a{color: #ffffff;font-size: 30px}
+        @import url(index.css);
     </style>
 </head>
 <body>
-    <div class="content">
-        <a href="blog"><h3>blog</h3></a>
+<div class="page">
+    <div class="nav">
+        <div class="center">
+            <div class="title">
+                maczam
+            </div>
+            <ul class="nav-right">
+                <li class="nav-item">
+                    <a href="#">主页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://maczam.duapp.com/">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://maczam.duapp.com/">本站源码</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/maczam">github</a>
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <div class="content">
+        <div class="stage">
+            <div class="nightOverlay"></div>
+            <div class="skyline"></div>
+            <div class="ground back"></div>
+            <div class="ground mid"></div>
+            <div class="ground front"></div>
+            <div class="cloud large"></div>
+            <div class="cloud small"></div>
+            <div class="cloud medium"></div>
+            <div class="balloon"></div>
+            <div class="rotation">
+                <div class="sun"></div>
+                <div class="moon"></div>
+            </div>
+        </div>
+        <div class="content-column">
+            <div class="open-list">
+                <h2>Java开源</h2>
+                <ul>
+                    <li class="open-item">
+                        <a href="https://github.com/maczam/jmacs">jmacs</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/simple-reflect-orm">simple-reflect-orm</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/jetty-session-redis">jetty-session-redis</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/mongo-client">mongo-client</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/statemachine">statemachine</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/designpattern">designpattern</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/rpcdemo">rpcdemo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="open-list">
+                <h2>Node开源</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/maczam/node-blog">node-blog</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maczam/node-fs-sugar">node-fs-sugar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer clearfix">© 2013 powered by nodejs&bae | 版本: 0.1.0</div>
+</div>
 </body>
 </html>
